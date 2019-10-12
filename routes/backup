@@ -1,0 +1,12 @@
+router.get('/kamar/add', function(req, res, next){
+    let kamar = new Kamar({
+		nomor: "002",
+		lantai: 1,
+		fasilitas: [
+			"TV", "AC", "Kulkas"
+		]
+    });
+    
+    kamar.save();
+	res.status(200).send(kamar);
+});
